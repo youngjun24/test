@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>시각디자인1,2과제전시회 웹사이트</title>
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="style-main.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4/turn.min.js"></script>
+
+</head>
+<style>
+
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+    /* 전체 페이지 설정 */
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f7f3e9; /* 기본 배경 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* 스케치북 전체 설정 */
+    .sketchbook {
+        width: 120vw;
+        height: 100vh;
+        border: 1px solid #c0c0c0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        transition: transform 0.6s ease;
+    }
+
+
+    
+    .content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        color: #333;
+        
+    }
+
+    .icon {
+        width: 170px;
+        height: 170px;
+        position: absolute;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+
+    .icon:hover {
+        transform: scale(1.5);
+    }
+
+    #personal-img {
+    width: 100%;
+    height: auto;
+}
+
+/* 가로형 랜덤 배치 - 중앙 로고와 겹치지 않도록 */
+.icon1 { top: 3%; left: 23%; }
+.icon2 { top: 30%; left: 37%; }
+.icon3 { top: 23%; left: 18%; }
+.icon4 { top: 17%; left: 74%; }
+.icon5 { top: 68%; left: 14%; }
+.icon6 { top: 3%; left: 38%; }
+.icon7 { top: 72%; left: 45%; }
+.icon8 { top: 2%; left: 65%; }
+.icon9 { top: 24%; left: 60%; }
+.icon10 { top: 60%; left: 73%; }
+.icon11 { top: 73%; left: 60%; }
+.icon12 { top: 45%; left: 15%; }
+.icon13 { top: 37%; left: 70%; }
+.icon14 { top: 70%; left: 85%; }
+.icon15 { top: 20%; left: 86%; }
+.icon16 { top: 44%; left: 27%; }
+.icon17 { top: 50%; left: 60%; }
+.icon18 { top: 45%; left: 85%; }
+.icon19 { top: 70%; left: 25%; }
+.icon20 { top: 10%; left: 50%; }
+.icon21 { top: 33%; left: 50%; }
+.icon22 { top: 57%; left: 40%; }
+
+
+
+
+
+    .title {
+        position: absolute;
+        width: 200px;
+        height: auto;
+        top: 0%;
+        left: 72%;
+    }
+
+    /*.subtitle {
+        font-family: 'Dongle', sans-serif;
+        font-size: 2em;
+        font-weight: 500;
+        color: #000000;
+        position: absolute;
+        top: 3%;
+        left: 90%;
+    }기존폰트서체일때*/
+
+
+   /* .logo {
+        position: absolute;
+        width: 200px;
+        height: auto;
+        top: 5%;
+        left: 2%;
+    }*/
+
+    /*.sublogo {
+        position: absolute;
+        width: 150px;
+        height: auto;
+        z-index: 2;
+
+    }
+
+    .sublogo1 { top: 5%; left: 20%; }
+    .sublogo2 { top: 10%; left: 60%; }
+    .sublogo3 { top: 70%; left: 10%; }
+    .sublogo4 { top: 80%; left: 60%; }나중에 넣게 되면 추가?*/
+
+    /* 모바일 */
+
+    @media (orientation: portrait) {
+            /* 전체 페이지 설정 */
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f7f3e9; /* 기본 배경 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* 스케치북 전체 설정 */
+    .sketchbook {
+        width: 120vw;
+        height: 100vh;
+        border: 1px solid #c0c0c0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        transition: transform 0.6s ease;
+    }
+
+
+    
+    .content {
+        position: relative;
+        top: 5%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        color: #333;
+        
+    }
+
+    .icon {
+        width: 170px;
+        height: 170px;
+        position: absolute;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+
+    .icon:hover {
+        transform: scale(1.5);
+    }
+
+    #personal-img {
+    width: 100%;
+    height: auto;
+}
+
+/* 가로형 랜덤 배치 - 중앙 로고와 겹치지 않도록 */
+.icon1 { top: 0%; left: 19%; width: 23%; height: auto;} /* 편지 */
+.icon2 { top: 32%; left: 39%; width: 23%; height: auto;}/* 타코야끼 */
+.icon3 { top: 29%; left: 14%; width: 23%; height: auto;} /* 커피잔 */
+.icon4 { top: 11%; left: 53%; width: 23%; height: auto;} /* 돌멩이...? */
+.icon5 { top: 60%; left: 2%; width: 23%; height: auto;} /* 벌 */
+.icon6 { top: -3%; left: 42%; width: 23%; height: auto;} /* 위쪽 책 */
+.icon7 { top: 78%; left: 26%; width: 23%; height: auto;} /* 집 */
+.icon8 { top: 2%; left: 73%; width: 23%; height: auto;} /* 양 */
+.icon9 { top: 23%; left: 56%; width: 23%; height: auto;} /* 완두콩 */
+.icon10 { top: 58%; left: 55%; width: 23%; height: auto;} /* 동글배기 */
+.icon11 { top: 73%; left: 52%; width: 23%; height: auto;} /* 강 */
+.icon12 { top: 42%; left: 4%; width: 23%; height: auto;} /* 물고기컵 */
+.icon13 { top: 33%; left: 72%; width: 23%; height: auto;} /* 납작컵 */
+.icon14 { top: 77%; left: 76%; width: 23%; height: auto;} /* 열쇠 */
+.icon15 { top: 18%; left: 77%; width: 23%; height: auto;} /* 입체컵 */
+.icon16 { top: 44%; left: 39%; width: 23%; height: auto;} /* 꽃 */
+.icon17 { top: 64%; left: 32%; width: 23%; height: auto;} /* 전구 */
+.icon18 { top: 61%; left: 78%; width: 23%; height: auto;} /* 상자 */
+.icon19 { top: 74%; left: 7%; width: 23%; height: auto;} /* 꿈 */
+.icon20 { top: 14%; left: 33%; width: 23%; height: auto;} /* 고양이 */
+.icon21 { top: 43%; left: 64%; width: 23%; height: auto;} /* 강아지 */
+.icon22 { top: 51%; left: 24%; width: 23%; height: auto;} /* 책 */
+
+
+
+
+
+    .title {
+        position: absolute;
+        width: 300px;
+        height: auto;
+        top: 5%;
+        left: 75%;
+    }
+
+    /*.subtitle {
+        font-family: 'Dongle', sans-serif;
+        font-size: 2em;
+        font-weight: 500;
+        color: #000000;
+        position: absolute;
+        top: 3%;
+        left: 90%;
+    }기존폰트서체일때*/
+
+
+   /* .logo {
+        position: absolute;
+        width: 200px;
+        height: auto;
+        top: 5%;
+        left: 2%;
+    }*/
+
+    /*.sublogo {
+        position: absolute;
+        width: 150px;
+        height: auto;
+        z-index: 2;
+
+    }
+
+    .sublogo1 { top: 5%; left: 20%; }
+    .sublogo2 { top: 10%; left: 60%; }
+    .sublogo3 { top: 70%; left: 10%; }
+    .sublogo4 { top: 80%; left: 60%; }나중에 넣게 되면 추가?*/
+    }
+
+</style>
+</head>
+<body>
+    <!-- 스케치북 전체 틀 -->
+    <div class="sketchbook">
+        
+        <!--<img src="title.png" alt="title" class="title">-->
+        <div class="title">
+            <img src="title.png" class="title">
+         </div>
+        <!--인덱스-->
+        <div class="index">
+            <a href="#" class="logo.png"></a>
+                <img src="logo.png" class="mainlogo">
+                <ul class="name-list">
+                    <div id="list">
+                        <li><a href="각 링크 삽입">김승주</a></li>
+                        <li><a href="각 링크 삽입">김민서</a></li>
+                        <li><a href="각 링크 삽입">동유빈</a></li>
+                        <li><a href="각 링크 삽입">류시완</a></li>
+                        <li><a href="각 링크 삽입">박수빈</a></li>
+                        <li><a href="각 링크 삽입">박현지</a></li>
+                        <li><a href="각 링크 삽입">배민영</a></li>
+                        <li><a href="각 링크 삽입">송나연</a></li>
+                        <li><a href="각 링크 삽입">양새봄</a></li>
+                        <li><a href="각 링크 삽입">오현유</a></li>
+                        <li><a href="각 링크 삽입">이다빈</a></li>
+                    </div>
+                   <div id="list">
+                        <li><a href="각 링크 삽입">정세아</a></li>
+                        <li><a href="각 링크 삽입">정은빈</a></li>
+                        <li><a href="각 링크 삽입">장지인</a></li>
+                        <li><a href="page16.html">조경서</a></li>
+                        <li><a href="각 링크 삽입">지선율</a></li>
+                        <li><a href="각 링크 삽입">차승민</a></li>
+                        <li><a href="각 링크 삽입">차정연</a></li>
+                        <li><a href="각 링크 삽입">최문선</a></li>
+                        <li><a href="page20.html">최영준</a></li>
+                        <li><a href="page21.html">최이안</a></li>
+                        <li><a href="각 링크 삽입">paz</a></li>
+                    </div>                    
+                </ul>
+        </div>
+
+        
+
+
+
+        <div class="content">
+            <img src="icon1.png" alt="Icon 1" class="icon icon1" onclick="turnPage('page1.html')">
+            <img src="icon2.png" alt="Icon 2" class="icon icon2" onclick="turnPage('page2.html')">
+            <img src="icon3.png" alt="Icon 3" class="icon icon3" onclick="turnPage('page3.html')">
+            <img src="icon4.png" alt="Icon 4" class="icon icon4" onclick="turnPage('page4.html')">
+            <img src="icon5.png" alt="Icon 5" class="icon icon5" onclick="turnPage('page5.html')">
+            <img src="icon6.png" alt="Icon 6" class="icon icon6" onclick="turnPage('page6.html')">
+            <img src="icon7.png" alt="Icon 7" class="icon icon7" onclick="turnPage('page7.html')">
+            <img src="icon8.png" alt="Icon 8" class="icon icon8" onclick="turnPage('page8.html')">
+            <img src="icon9.png" alt="Icon 9" class="icon icon9" onclick="turnPage('page9.html')">
+            <img src="icon10.png" alt="Icon 10" class="icon icon10" onclick="turnPage('page10.html')">
+            <img src="icon11.png" alt="Icon 11" class="icon icon11" onclick="turnPage('page11.html')">
+            <img src="icon12.png" alt="Icon 12" class="icon icon12" onclick="turnPage('page12.html')">
+            <img src="icon13.png" alt="Icon 13" class="icon icon13" onclick="turnPage('page13.html')">
+            <img src="icon14.png" alt="Icon 14" class="icon icon14" onclick="turnPage('page14.html')">
+            <img src="icon15.png" alt="Icon 15" class="icon icon15" onclick="turnPage('page15.html')">
+            <img src="icon16.png" alt="Icon 16" class="icon icon16" onclick="turnPage('page16.html')">
+            <img src="icon17.png" alt="Icon 17" class="icon icon17" onclick="turnPage('page17.html')">
+            <img src="icon18.png" alt="Icon 18" class="icon icon18" onclick="turnPage('page18.html')">
+            <img src="icon19.png" alt="Icon 19" class="icon icon19" onclick="turnPage('page19.html')">
+            <img src="icon20.png" alt="Icon 20" class="icon icon20" onclick="turnPage('page20.html')">
+            <img src="icon21.png" alt="Icon 21" class="icon icon21" onclick="turnPage('page21.html')">
+            <img src="icon22.png" alt="Icon 22" class="icon icon22" onclick="turnPage('page22.html')">
+
+
+
+        </div>
+    </div>
+
+    
+    <script>
+        function turnPage(url) {
+            const sketchbook = document.querySelector('.sketchbook');
+            sketchbook.classList.add('turning');
+
+            setTimeout(() => {
+                window.location.href = url;
+            }, 600);
+        }
+    </script>
+</body>
+</html>

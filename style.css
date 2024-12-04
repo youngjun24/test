@@ -1,0 +1,131 @@
+/* 인덱스 작동 */
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.index {
+    font-family: "SpoqaHanSansNeo-Regular";
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    list-style-type: none;
+    position: fixed;
+    top: 2vh;
+    left: 2vw;
+    display: flex;
+    flex-direction: row;
+    padding: 0 15px;
+    width: 15%;
+    height: auto;
+    line-height: 1.4em;
+    color: black;
+    z-index: 10;
+}
+
+#list {
+    margin-right: 3%;
+}
+
+.index:hover .name-list { 
+    display: flex;
+}
+
+.mainlogo {
+    width: 90%;
+}
+
+.name-list {
+    display: none;
+    position: absolute;
+    top: calc(13vh + 52%);
+    left: calc(1vw + 10%);
+    right: 0;
+    text-align: left;
+    flex-direction: row;
+}
+
+.index .name-list a {
+    display: flex;
+    margin: 10px;
+}
+
+  /* 모바일 */
+
+  @media (orientation: portrait) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    ul {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    
+    .index {
+        font-family: "SpoqaHanSansNeo-Regular";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 8px;
+        list-style-type: none;
+        position: fixed;
+        top: 2vh;
+        left: 2vw;
+        display: flex;
+        flex-direction: row;
+        padding: 0 15px;
+        width: 16%;
+        height: auto;
+        line-height: 1.1em;
+        color: black;
+        z-index: 10;
+    }
+    
+    #list {
+        margin-right: 0.5%;
+    }
+    
+    .index:hover .name-list { 
+        display: flex;
+    }
+    
+    .mainlogo {
+        width: 80%;
+    }
+    
+    .name-list {
+        display: none;
+        position: absolute;
+        top: calc(10vh + 10%);
+        left: calc(1vw + 5%);
+        right: 0;
+        text-align: left;
+        flex-direction: row;
+    }
+    
+    .index .name-list a {
+        display: flex;
+        margin: 10px;
+    }
+
+}

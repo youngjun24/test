@@ -1,0 +1,1308 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>VD 1,2 과제전시회-최영준</title>
+        <!--타이틀 메인 페이지와 통일 필요할 경우 수정-->
+
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff" rel="stylesheet">
+    </head>
+
+  <style>
+    /* 인덱스 작동 css로 따로 빼둠*/
+
+/* 중앙 아이덴티티 */
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fixed-item {
+    position: fixed;
+    margin: 0px auto;
+    left: 40%;
+    transform: translateX(-20%);
+    top: 40%;
+    transform: translateY(-20%);
+    z-index: 1;
+}
+
+#personal-img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* 텍스트 설정 */
+
+.title {
+    position: relative;
+    text-align: right;
+    font-family: "SpoqaHanSansNeo-Regular";
+    font-size: 26px;
+    line-height: 1.8em;
+    letter-spacing: -0.5px;
+}
+
+.describtion {
+    font-family: "SpoqaHanSansNeo-Regular";
+    font-weight: 400;
+    text-align: right;
+    line-height: 1.3em;
+    font-size: 14px;
+    letter-spacing: -0.7px;
+    word-spacing: 1.2px;
+}
+
+#align-center {
+    text-align: center;
+}
+
+#align-left {
+    text-align: left;
+}
+
+/* 왼쪽 레이아웃 정렬 */
+
+.left-wrap {
+    display: flex;
+    margin-top: calc(1vh + 5%);
+}
+
+/* 오른쪽 레이아웃 정렬 */
+
+.right-wrap {
+    display: flex;
+    margin-top: calc(1vh + 5%);
+}
+
+
+/* 이미지 추가할 경우 .layout(번호) #img(번호) {} 코드를 추가해서 위쪽, 왼쪽 마진값을 정해주며
+위치 조정하면 됩니다. 위치값을 줄 때는 %로 줘야 화면별로 균일하게 적용됩니다. */
+/* 사용하지 않는 이미지 태그는 모두 지워주세요(충돌 방지)*/
+/* shape poster 레이아웃 */
+
+.layout1 {
+    position: absolute;
+    left: calc(2vw + 10%);
+    width: 32%;
+}
+
+#img1 {
+    max-width:70%;
+    height: auto;
+}
+
+
+.layout1 #img1 {
+    float: right;
+    margin-top: 10px;
+}
+
+
+.clear{
+    clear:both;
+}
+
+/* Patter Poster 레이아웃 */
+
+.layout2 {
+    position: absolute;
+    left: calc(2vw + 10%);
+    top: calc(2vh + 100%);
+    width: 32%;
+    height: max-content;
+}
+
+#img5 {
+    max-width:50%;
+    height: auto;
+}
+
+#img6 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+#img7 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+#img7_1 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+#img7_2 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+/*패턴포스터 5장인 사람을 위한 추가 태그(7_1, 7_2) 바로 아래 레이아웃 태그도 추가*/
+
+
+.layout2 #img5 {
+    float: right;
+    margin-top: 10px;
+}
+
+.layout2 #img6 {
+    float: right;
+    margin-top: 30%;
+}
+
+.layout2 #img7 {
+    float: left;
+    margin-top: 90%;
+    margin-left: calc(1vw + 30%);
+}
+
+.layout2 #img7_1 {
+    float: left;
+    margin-top: 120%;
+}
+
+.layout2 #img7_2 {
+    float: left;
+    margin-top: 140%;
+    margin-left: calc(1vw + 40%);
+}
+
+
+/* Minimal 레이아웃 */
+
+.layout-min {
+    position: absolute;
+    left: calc(2vw + 25%);
+    top: calc(1vh + 245%);
+    height: 40%;
+    width: max-content;
+}
+
+
+#img8 {
+    max-width: 80%;
+    height: auto;
+    position: absolute;
+}
+
+
+/* Maximal Poster 레이아웃 */
+
+.layout-max {
+    position: absolute;
+    left: calc(2vw + 15%);
+    top: calc(1vh + 260%);
+    width: 32%;
+    height: max-content;
+}
+
+#img9 {
+    max-width: 50%;
+    height: auto;
+}
+
+/* Identity Branding 레이아웃 */
+
+.layout7 {
+    position: absolute;
+    left: calc(2vw + 10%);
+    top: calc(2vh + 320%);
+    width: 32%;
+    height: max-content;
+}
+
+#img28 {
+    max-width:50%;
+    height: auto;
+}
+
+#img29 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+#img30 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+#img31 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+#img32 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+.layout7 #img28 {
+    float: right;
+}
+
+.layout7 #img29 {
+    float: right;
+    margin-top: 30%;
+    margin-left: 30%;
+}
+
+.layout7 #img30 {
+    float: left;
+    margin-top: 60%;
+    margin-left: 45%;
+}
+
+.layout7 #img31 {
+    float: left;
+    margin-top: 110%;
+}
+
+.layout7 #img32 {
+    float: left;
+    margin-top: 100%;
+    margin-left: 60%;
+}
+
+
+/* Generative System Design 레이아웃 */
+
+.layout3 {
+    position: absolute;
+    right: 5%;
+    width: 32%;
+    height: max-content;
+}
+
+#img10 {
+    max-width:70%;
+    height: auto;
+}
+
+#video {
+    max-width: 80%;
+    height: auto;
+}
+
+#img11 {
+    max-width: 80%;
+    height: auto;
+    position: absolute;
+}
+
+#img12 {
+    max-width: 80%;
+    height: auto;
+    position: absolute;
+}
+
+#img13 {
+    max-width: 60%;
+    height: auto;
+    position: absolute;
+}
+
+#img14 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+.layout3 #img10 {
+    float: left;
+    margin-top: 10px;
+}
+
+.layout3 #img11 {
+    float: left;
+    margin-top: 50%;
+    margin-left: 40%;
+}
+
+.layout3 #img12 {
+    float: left;
+    margin-top: 90%;
+    margin-left: -70%;
+}
+
+.layout3 #img13 {
+    float: left;
+    margin-top: 90%;
+    margin-left: -50%;
+}
+
+.layout3 #img14 {
+    float: left;
+    margin-top: 120%;
+    margin-left: -80%;
+}
+
+
+/* Exhibition Design 레이아웃 */
+
+.layout4 {
+    position: absolute;
+    right: 5%;
+    top: calc(1vh + 140%);
+    width: 32%;
+    height: max-content;
+}
+
+
+#img15 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+#img16 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+#img17 {
+    max-width: 60%;
+    height: auto;
+    position: absolute;
+}
+
+#img18 {
+    max-width: 60%;
+    height: auto;
+    position: absolute;
+}
+
+.layout4 #img15 {
+    float: left;
+    margin-top: 10px;
+}
+
+.layout4 #img16 {
+    float:left;
+    margin-top: 30%;
+    margin-left: 30%;
+}
+
+.layout4 #img17 {
+    float: right;
+    margin-top: 50%;
+    margin-left: -20%;
+}
+
+.layout4 #img18 {
+    float: left;
+    margin-top: 80%;
+    margin-left: 35%;
+}
+
+
+
+/* Collectbook 레이아웃 */
+
+.layout5 {
+    position: absolute;
+    right: 5%;
+    top: calc(1vh + 245%);
+    width: 32%;
+    height: max-content;
+}
+
+#img19 {
+    max-width: 60%;
+    height: auto;
+    position: absolute;
+}
+
+#img20 {
+    max-width: 60%;
+    height: auto;
+    position: absolute;
+}
+
+.layout5 #img19 {
+    float: left;
+    margin-top: 10px;
+}
+
+.layout5 #img20 {
+    float: left;
+    margin-top: 30%;
+    margin-left: 35%;
+}
+
+/* Mapping 레이아웃 */
+
+.layout6 {
+    position: absolute;
+    right: 5%;
+    top: calc(1vh + 330%);
+    width: 32%;
+    height: max-content;
+}
+
+#img21 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+#img22 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+#img23 {
+    max-width: 40%;
+    height: auto;
+    position: absolute;
+}
+
+#img24 {
+    max-width: 40%;
+    height: auto;
+    position: absolute;
+}
+
+#img25 {
+    max-width: 40%;
+    height: auto;
+    position: absolute;
+}
+
+#img26 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+#img27 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+.layout6 #img21 {
+    float: left;
+    margin-top: 10px;
+}
+
+.layout6 #img22 {
+    float: left;
+    margin-top: 20%;
+    margin-left: 35%;
+}
+
+.layout6 #img23 {
+    float: left;
+    margin-top: 30%;
+    margin-left: 65%;
+}
+
+.layout6 #img24 {
+    float: left;
+    margin-top: 50%;
+    margin-left: 65%;
+}
+
+.layout6 #img25 {
+    float: left;
+    margin-top: 55%;
+    margin-left: -25%;
+}
+
+.layout6 #img26 {
+    float: left;
+    margin-top: 60%;
+    margin-left: 5%;
+}
+
+.layout6 #img27 {
+    float: left;
+    margin-top: 80%;
+    margin-left: 40%;
+}
+
+/* 갤러리 스타일 */
+.gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .gallery-item {
+    width: max-content;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.5);
+    animation-timing-function: ease;
+    animation-duration: 0.3s;
+    z-index: 10;
+  }
+  
+
+  /* 모바일 */
+
+  @media (orientation: portrait) {
+  
+
+    /* 중앙 아이덴티티 */
+
+    .fixed-item {
+        position: fixed;
+        margin: 0px auto;
+        left: 30%;
+        transform: translateX(-10%);
+        top: 40%;
+        transform: translateY(-20%);
+        z-index: -1;
+    }
+
+    #personal-img {
+        width: 70%;
+        height: auto;
+    }
+
+
+    /* 텍스트 설정 */
+
+    .title {
+        position: relative;
+        text-align: right;
+        font-family: "SpoqaHanSansNeo-Regular";
+        font-size: 20px;
+        line-height: 1.8em;
+    }
+
+    .describtion {
+        font-family: "SpoqaHanSansNeo-Regular";
+        font-weight: 400;
+        text-align: right;
+        line-height: 1.5em;
+        font-size: 12px;
+    }
+
+    /* 왼쪽 레이아웃 정렬 */
+
+    .left-wrap {
+        display: flex;
+        margin-top: calc(1vh + 10%);
+    }
+
+    /* 오른쪽 레이아웃 정렬 */
+
+    .right-wrap {
+        display: flex;
+        margin-top: calc(1vh + 10%);
+    }
+
+
+    /* 이미지 추가할 경우 .layout(번호) #img(번호) {} 코드를 추가해서 위쪽, 왼쪽 마진값을 정해주며
+    위치 조정하면 됩니다. 위치값을 줄 때는 %로 줘야 화면별로 균일하게 적용됩니다. */
+    /* 사용하지 않는 이미지 태그는 모두 지워주세요(충돌 방지)*/
+    /* shape poster 레이아웃 */
+    .layout1 {
+        position: absolute;
+        left: 10%;
+        width: 32%;
+    }
+    
+    #img1 {
+        max-width:80%;
+        height: auto;
+    }
+    
+    #img2 {
+        max-width: 70%;
+        height: auto;
+        position: absolute;
+    }
+    
+    #img3 {
+        max-width: 80%;
+        height: auto;
+        position: absolute;
+    }
+    
+    #img4 {
+        max-width: 80%;
+        height: auto;
+        position: absolute;
+    }
+
+    .layout1 #img1 {
+        float: right;
+        margin-top: 10px;
+    }
+    
+    .layout1 #img2 {
+        float: left;
+        margin-top: calc(2vw + 40%);
+        margin-left: -10%;
+    }
+    
+    .layout1 #img3 {
+        float: right;
+        margin-left: calc(1vw + 30%);
+        margin-top: calc(1vh + 90%);
+    }
+    
+    .layout1 #img4 {
+        float: left;
+        margin-left: calc(1vw + 5%);
+        margin-top: calc(1vh + 140%);
+    }
+    
+    
+    .clear{
+        clear:both;
+    }
+
+    
+/* Patter Poster 레이아웃 */
+
+.layout2 {
+    position: absolute;
+    left: 10%;
+    top: 65%;
+    width: 32%;
+    height: max-content;
+}
+
+#img5 {
+    max-width:70%;
+    height: auto;
+}
+
+#img6 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+#img7 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+#img7_1 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+#img7_2 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+.layout2 #img5 {
+    float: right;
+    margin-top: 10px;
+}
+
+.layout2 #img6 {
+    float: right;
+    margin-top: 60%;
+}
+
+.layout2 #img7 {
+    float: left;
+    margin-top: 120%;
+    margin-left: 60%;
+}
+
+.layout2 #img7_1 {
+    float: left;
+    margin-top: 180%;
+    margin-left: 15%;
+}
+
+.layout2 #img7_2 {
+    float: left;
+    margin-top: 250%;
+    margin-left: -5%;
+}
+
+/* Minimal 레이아웃 */
+
+.layout-min {
+    position: absolute;
+    left: 25%;
+    top: 190%;
+    height: 20%;
+    width: max-content;
+}
+
+
+#img8 {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+}
+
+
+/* Maximal Poster 레이아웃 */
+
+.layout-max {
+    position: absolute;
+    left: 7%;
+    top: 210%;
+    width: 32%;
+    height: max-content;
+}
+
+#img9 {
+    max-width: 80%;
+    height: auto;
+}
+
+/* Identity Branding 레이아웃 */
+
+.layout7 {
+    position: absolute;
+    left: 10%;
+    top: 255%;
+    width: 32%;
+    height: max-content;
+}
+
+#img28 {
+    max-width:70%;
+    height: auto;
+}
+
+#img29 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+#img30 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+#img31 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+#img32 {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+}
+
+.layout7 #img28 {
+    float: right;
+}
+
+.layout7 #img29 {
+    float: right;
+    margin-top: 50%;
+    margin-left: -10%;
+}
+
+.layout7 #img30 {
+    float: left;
+    margin-top: 90%;
+    margin-left: 45%;
+}
+
+.layout7 #img31 {
+    float: left;
+    margin-top: 110%;
+}
+
+.layout7 #img32 {
+    float: left;
+    margin-top: 150%;
+    margin-left: 70%;
+}
+
+/* Generative System Design 레이아웃 */
+
+.layout3 {
+    position: absolute;
+    right: 5%;
+    width: 32%;
+    height: max-content;
+}
+
+#img10 {
+    max-width:70%;
+    height: auto;
+}
+
+#img11 {
+    max-width: 80%;
+    height: auto;
+    position: absolute;
+}
+
+#img12 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+#img13 {
+    max-width: 60%;
+    height: auto;
+    position: absolute;
+}
+
+#img14 {
+    max-width: 80%;
+    height: auto;
+    position: absolute;
+}
+
+.layout3 #img10 {
+    float: left;
+    margin-top: 10px;
+    margin-left: 15%;
+}
+
+.layout3 #img11 {
+    float: left;
+    margin-top: 80%;
+    margin-left: 40%;
+}
+
+.layout3 #img12 {
+    float: left;
+    margin-top: 80%;
+    margin-left: -75%;
+}
+
+.layout3 #img13 {
+    float: left;
+    margin-top: 90%;
+    margin-left: -50%;
+}
+
+.layout3 #img14 {
+    float: left;
+    margin-top: 120%;
+    margin-left: -80%;
+}
+
+
+/* Exhibition Design 레이아웃 */
+
+.layout4 {
+    position: absolute;
+    right: 5%;
+    top: 90%;
+    width: 32%;
+    height: max-content;
+}
+
+
+#img15 {
+    max-width: 80%;
+    height: auto;
+    position: absolute;
+}
+
+#img16 {
+    max-width: 80%;
+    height: auto;
+    position: absolute;
+}
+
+#img17 {
+    max-width: 80%;
+    height: auto;
+    position: absolute;
+}
+
+#img18 {
+    max-width: 80%;
+    height: auto;
+    position: absolute;
+}
+
+.layout4 #img15 {
+    float: left;
+    margin-top: 10px;
+}
+
+.layout4 #img16 {
+    float:left;
+    margin-top: 55%;
+    margin-left: 25%;
+}
+
+.layout4 #img17 {
+    float: right;
+    margin-top: 100%;
+    margin-left: -20%;
+}
+
+.layout4 #img18 {
+    float: left;
+    margin-top: 150%;
+    margin-left: 35%;
+}
+
+
+
+/* Collectbook 레이아웃 */
+
+.layout5 {
+    position: absolute;
+    right: 15%;
+    top: 160%;
+    width: 32%;
+    height: max-content;
+}
+
+#img19 {
+    max-width: 90%;
+    height: auto;
+    position: absolute;
+}
+
+#img20 {
+    max-width: 90%;
+    height: auto;
+    position: absolute;
+}
+
+.layout5 #img19 {
+    float: left;
+    margin-top: 10px;
+}
+
+.layout5 #img20 {
+    float: left;
+    margin-top: 60%;
+    margin-left: 35%;
+}
+
+/* Mapping 레이아웃 */
+
+.layout6 {
+    position: absolute;
+    right: 15%;
+    top: 240%;
+    width: 40%;
+    height: max-content;
+}
+
+#img21 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+#img22 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+#img23 {
+    max-width: 40%;
+    height: auto;
+    position: absolute;
+}
+
+#img24 {
+    max-width: 40%;
+    height: auto;
+    position: absolute;
+}
+
+#img25 {
+    max-width: 40%;
+    height: auto;
+    position: absolute;
+}
+
+#img26 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+#img27 {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+}
+
+.layout6 #img21 {
+    float: left;
+    margin-top: 10px;
+}
+
+.layout6 #img22 {
+    float: left;
+    margin-top: 20%;
+    margin-left: 35%;
+}
+
+.layout6 #img23 {
+    float: left;
+    margin-top: 30%;
+    margin-left: 65%;
+}
+
+.layout6 #img24 {
+    float: left;
+    margin-top: 50%;
+    margin-left: 65%;
+}
+
+.layout6 #img25 {
+    float: left;
+    margin-top: 55%;
+    margin-left: -25%;
+}
+
+.layout6 #img26 {
+    float: left;
+    margin-top: 60%;
+    margin-left: 5%;
+}
+
+.layout6 #img27 {
+    float: left;
+    margin-top: 80%;
+    margin-left: 40%;
+}
+
+  }
+  /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+  </style>
+
+    <body>
+        <!--인덱스-->
+        <div class="index">
+            <a href="#" class="logo.png"></a>
+                <img src="logo.png" class="mainlogo">
+                <ul class="name-list">
+                    <div id="list">
+                        <li><a href="각 링크 삽입">김승주</a></li>
+                        <li><a href="각 링크 삽입">김민서</a></li>
+                        <li><a href="각 링크 삽입">동유빈</a></li>
+                        <li><a href="각 링크 삽입">류시완</a></li>
+                        <li><a href="각 링크 삽입">박수빈</a></li>
+                        <li><a href="각 링크 삽입">박현지</a></li>
+                        <li><a href="각 링크 삽입">배민영</a></li>
+                        <li><a href="각 링크 삽입">송나연</a></li>
+                        <li><a href="각 링크 삽입">양새봄</a></li>
+                        <li><a href="각 링크 삽입">오현유</a></li>
+                        <li><a href="각 링크 삽입">이다빈</a></li>
+                    </div>
+                   <div id="list">
+                        <li><a href="각 링크 삽입">정세아</a></li>
+                        <li><a href="각 링크 삽입">정은빈</a></li>
+                        <li><a href="각 링크 삽입">장지인</a></li>
+                        <li><a href="page16.html">조경서</a></li>
+                        <li><a href="각 링크 삽입">지선율</a></li>
+                        <li><a href="각 링크 삽입">차승민</a></li>
+                        <li><a href="각 링크 삽입">차정연</a></li>
+                        <li><a href="각 링크 삽입">최문선</a></li>
+                        <li><a href="page20.html">최영준</a></li>
+                        <li><a href="각 링크 삽입">최이안</a></li>
+                        <li><a href="각 링크 삽입">paz</a></li>
+                    </div>                    
+                </ul>
+        </div>
+                
+        <!--중앙 아이덴티티&이름-->
+        <div class="fixed-item">
+                <img src="Identity/최영준.png" id="personal-img">
+        </div>
+
+<div class="gallery">
+    <div class="left-wrap">
+        <!-- 이미지 -->
+            <!--Section1-->
+            <div class="layout1" id="section1">
+                <div class="title">Shape poster</div>
+                <div class="describtion">사각형 레고를 기반으로<br>동심을 떠올리는 컨셉으로 디자인하였다.</div>
+                <img src="최영준/3.shape poster final.jpg" class="gallery-item" id="img1" onclick>
+                <!--<img src="img/1 Shape Poster/조경서/쉐입포스터최종본1_조경서.jpg" class="gallery-item" id="img1" onclick>
+                <img src="img/1 Shape Poster/조경서/쉐입포스터최종본3_조경서.jpg" class="gallery-item" id="img3" onclick>
+                <img src="img/1 Shape Poster/조경서/쉐입포스터최종본4_조경서.jpg" class="gallery-item" id="img4" onclick>-->
+                <div class="clear"></div>
+             </div> 
+
+            <!--Section2-->
+            <div class="layout2" id="Section2">
+                <div class="title">Pattern poster</div>
+                <div class="describtion">어딘가 이상하면서 자유로운 고양이의 특성을 보여주는 패턴포스터를<br>어도비 파이어플라이와 포토샵을 이용하여 조정하여 제작하였다.</div>   
+                <img src="최영준/패턴포스터1_최영준.jpg" class="gallery-item" id="img6" onclick> 
+                <img src="최영준/패턴포스터2_최영준.jpg" class="gallery-item" id="img5" onclick>
+                <img src="최영준/패턴포스터3_최영준.jpg" class="gallery-item" id="img7" onclick>
+                <img src="최영준/패턴포스터4_최영준.jpg" class="gallery-item" id="img7_1" onclick>
+                <img src="최영준/패턴포스터5_최영준.jpg" class="gallery-item" id="img7_2" onclick>
+                <div class="clear"></div>
+            </div>
+
+            <!--Minimal Poster-->
+            <div class="layout-min" id="Minimal-poster">
+                <div class="title" id="align-left">Minimal poster</div>
+                <img src="최영준/minimal최영준.jpg" class="gallery-item" id="img8" onclick>
+                <div class="clear"></div>
+            </div> 
+            
+            <!--Maximal Poster-->
+            <div class="layout-max" id="Maximal-poster">
+                <div class="title" id="align-left">Maximal poster</div>
+                <img src="최영준/maximal poster.jpg" class="gallery-item" id="img9" onclick>
+                <div class="clear"></div>
+            </div>    
+
+            <!-- Identity Branding -->
+             <div class="layout7" id="Section7">
+                <div class="title">Identity Branding</div>
+                <img src="최영준/띠부스티커.jpg" class="gallery-item" id="img29" onclick>
+                <img src="최영준/엽서_앞면.jpg" class="gallery-item" id="img30" onclick>
+                <img src="최영준/nfc명함.jpg" class="gallery-item" id="img28" onclick>
+                <img src="최영준/웹사이트.jpg" class="gallery-item" id="img31" onclick>
+                <img src="최영준/패키지박스_1.jpg" class="gallery-item" id="img32" onclick>
+                <div class="clear"></div>
+             </div>
+    </div>
+
+    </div>
+
+    <div class="right-wrap">
+            <!--Section3-->
+            <div class="layout3" id="Section3">
+                    <div class="title" id="align-left">Generative system</div>
+                    <div class="describtion" id="align-left">달맞이꽃 시스템으로 시계 영상 및 희곡 대본집을 제작하였다.
+                        </div>
+                        <video controls width="80%" margin>
+                        <source src="최영준/clock.mp4" class="gallery-item" id="video" onclick></video>
+                        <img src="최영준/희곡집1.jpg" class="gallery-item" id="img10" onclick>
+                        <img src="최영준/희곡집2.jpg" class="gallery-item" id="img12" onclick>
+                        <!--<img src="img/3 Generative System/조경서/제너러시스템4_조경서.jpg" class="gallery-item" id="img13" onclick>
+                        <img src="img/3 Generative System/조경서/제너러시스템5_조경서.jpg" class="gallery-item" id="img14" onclick>-->
+                        <div class="clear"></div>
+                </div>    
+            </div>
+
+            <!--Section4-->
+            <div class="layout4" id="Section4">
+                    <div class="title" id="align-left">Exhibition design</div>
+                    <div class="describtion" id="align-left">1. 동물농장 느낌에서 넓은 목장이 떠올라 양떼목장 컨셉으로 시각화하였다.
+                        <br>2. 한 학기 동안의 시각 여행을 떠나는 느낌으로 비행기와 경로선으로 제작하였다.
+                        
+                </div>
+                        <img src="최영준/전시브랜딩1_최영준.jpg" class="gallery-item" id="img15" onclick>
+                        <img src="최영준/전시브랜딩2_최영준.jpg" class="gallery-item" id="img16" onclick>
+                        <!--<img src="img/3 Generative System/조경서/제너러시스템8_조경서.jpg" class="gallery-item" id="img17" onclick>
+                        <img src="img/3 Generative System/조경서/제너러시스템9_조경서.jpg" class="gallery-item" id="img18" onclick>-->
+                    <div class="clear"></div>
+                </div>    
+            </div>
+
+            <!--Section5-->
+            <div class="layout5" id="Section5">
+                    <div class="title" id="align-left">Collect book-브랜드 태그</div>
+                    <img src="최영준/콜렉티드북1.jpg" class="gallery-item" id="img19" onclick>
+                    <img src="최영준/콜렉티드북2.jpg" class="gallery-item" id="img20" onclick>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <!--Section6-->
+            <!--<div class="layout6" id="Section6">
+                    <div class="title" id="align-left">Mapping your time-십자말풀이</div>
+                    <img src="img/8 Mapping Your Time/조경서/맵핑유어타임1_조경서.jpg" class="gallery-item" id="img21" onclick>
+                    <img src="img/8 Mapping Your Time/조경서/맵핑유어타임2_조경서.jpg" class="gallery-item" id="img22" onclick>
+                    <img src="img/8 Mapping Your Time/조경서/맵핑유어타임3_조경서.jpg" class="gallery-item" id="img23" onclick>
+                    <img src="img/8 Mapping Your Time/조경서/맵핑유어타임4_조경서.jpg" class="gallery-item" id="img24" onclick>
+                    <img src="img/8 Mapping Your Time/조경서/맵핑유어타임5_조경서.jpg" class="gallery-item" id="img25" onclick>
+                    <img src="img/8 Mapping Your Time/조경서/맵핑유어타임6_조경서.jpg" class="gallery-item" id="img26" onclick>
+                    <img src="img/8 Mapping Your Time/조경서/맵핑유어타임7_조경서.jpg" class="gallery-item" id="img27" onclick>
+                    <div class="clear"></div>
+                </div> -->
+            </div>
+        </div>
+</div>
+
+    </body>
+</html>
